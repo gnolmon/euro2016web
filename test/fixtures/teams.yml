@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ensign: MyString
+  group: MyString
+  name: MyString
+  point: MyString
+  won: MyString
+  draw: MyString
+  lost: MyString
+  goal_difference: MyString
+
+two:
+  ensign: MyString
+  group: MyString
+  name: MyString
+  point: MyString
+  won: MyString
+  draw: MyString
+  lost: MyString
+  goal_difference: MyString

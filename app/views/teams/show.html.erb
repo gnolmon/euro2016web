@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ensign:</strong>
+  <%= @team.ensign %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @team.group %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Point:</strong>
+  <%= @team.point %>
+</p>
+
+<p>
+  <strong>Won:</strong>
+  <%= @team.won %>
+</p>
+
+<p>
+  <strong>Draw:</strong>
+  <%= @team.draw %>
+</p>
+
+<p>
+  <strong>Lost:</strong>
+  <%= @team.lost %>
+</p>
+
+<p>
+  <strong>Goal difference:</strong>
+  <%= @team.goal_difference %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
