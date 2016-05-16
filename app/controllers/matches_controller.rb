@@ -7,7 +7,7 @@ class MatchesController < ApplicationController
     @matches = Match.all
     respond_to do |format|
       format.json { render json: @matches }
-      format.xml { render xml: @matches }
+      format.html
     end
   end
 
