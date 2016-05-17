@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Header</th>
       <th>Ensign1</th>
       <th>Team1</th>
       <th>Point1</th>
@@ -21,6 +22,7 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
+        <td><%= match.header %></td>
         <td><%= match.ensign1 %></td>
         <td><%= match.team1 %></td>
         <td><%= match.point1 %></td>

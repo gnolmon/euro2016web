@@ -1,6 +1,7 @@
 class CreateMatches < ActiveRecord::Migration
   def change
     create_table :matches do |t|
+      t.string :header
       t.string :ensign1
       t.string :team1
       t.string :point1

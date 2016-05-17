@@ -5,9 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>Header</th>
       <th>Ensign</th>
       <th>Group</th>
+      <th>Position</th>
       <th>Name</th>
+      <th>Match player</th>
       <th>Point</th>
       <th>Won</th>
       <th>Draw</th>
@@ -20,9 +23,12 @@
   <tbody>
     <% @teams.each do |team| %>
       <tr>
+        <td><%= team.header %></td>
         <td><%= team.ensign %></td>
         <td><%= team.group %></td>
+        <td><%= team.position %></td>
         <td><%= team.name %></td>
+        <td><%= team.match_player %></td>
         <td><%= team.point %></td>
         <td><%= team.won %></td>
         <td><%= team.draw %></td>

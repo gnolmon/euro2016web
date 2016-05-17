@@ -18,7 +18,7 @@ class TeamsControllerTest < ActionController::TestCase
 
   test "should create team" do
     assert_difference('Team.count') do
-      post :create, team: { draw: @team.draw, ensign: @team.ensign, goal_difference: @team.goal_difference, group: @team.group, lost: @team.lost, name: @team.name, point: @team.point, won: @team.won }
+      post :create, team: { draw: @team.draw, ensign: @team.ensign, goal_difference: @team.goal_difference, group: @team.group, header: @team.header, lost: @team.lost, match_player: @team.match_player, name: @team.name, point: @team.point, position: @team.position, won: @team.won }
     end
 
     assert_redirected_to team_path(assigns(:team))
@@ -35,7 +35,7 @@ class TeamsControllerTest < ActionController::TestCase
   end
 
   test "should update team" do
-    patch :update, id: @team, team: { draw: @team.draw, ensign: @team.ensign, goal_difference: @team.goal_difference, group: @team.group, lost: @team.lost, name: @team.name, point: @team.point, won: @team.won }
+    patch :update, id: @team, team: { draw: @team.draw, ensign: @team.ensign, goal_difference: @team.goal_difference, group: @team.group, header: @team.header, lost: @team.lost, match_player: @team.match_player, name: @team.name, point: @team.point, position: @team.position, won: @team.won }
     assert_redirected_to team_path(assigns(:team))
   end
 

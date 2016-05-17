@@ -11,9 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516165703) do
+ActiveRecord::Schema.define(version: 20160517091126) do
 
   create_table "matches", force: :cascade do |t|
+    t.string   "header"
     t.string   "ensign1"
     t.string   "team1"
     t.string   "point1"
@@ -28,9 +29,12 @@ ActiveRecord::Schema.define(version: 20160516165703) do
   end
 
   create_table "teams", force: :cascade do |t|
+    t.string   "header"
     t.string   "ensign"
     t.string   "group"
+    t.string   "position"
     t.string   "name"
+    t.string   "match_player"
     t.string   "point"
     t.string   "won"
     t.string   "draw"
