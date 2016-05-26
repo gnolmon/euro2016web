@@ -63,11 +63,13 @@ class NotificationsController < ApplicationController
   end
 
   def send_gcm_notification notification
-    app = Rpush::Gcm::App.new
-    app.name = "android_app"
-    app.auth_key = "AIzaSyC8wQBvNUaVgGtF3sMlwf97fzPxuR1-x0s"
-    app.connections = 1
-    app.save!
+    if !Rpush::Gcm::App.find_by_name("android_app")
+      app = Rpush::Gcm::App.new
+      app.name = "android_app"
+      app.auth_key = "AIzaSyC8wQBvNUaVgGtF3sMlwf97fzPxuR1-x0s"
+      app.connections = 1
+      app.save!
+    end
 
     n = Rpush::Gcm::Notification.new
     n.app = Rpush::Gcm::App.find_by_name("android_app")
