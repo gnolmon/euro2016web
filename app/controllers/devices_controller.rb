@@ -25,9 +25,6 @@ class DevicesController < ApplicationController
   # POST /devices.json
   def create
     @device = Device.new(device_params)
-    if device_params[:id]
-      @device.id = device_params[:id]
-    end
 
     respond_to do |format|
       if @device.save
@@ -72,6 +69,6 @@ class DevicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def device_params
-      params.require(:device).permit(:registration_id, :id)
+      params.require(:device).permit(:registration_id)
     end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :notifications
   resources :devices
+  resources :notifications
   resources :stadia
   resources :matches
   resources :teams
