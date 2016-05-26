@@ -64,13 +64,13 @@ class NotificationsController < ApplicationController
 
   def send_gcm_notification notification
     app = Rpush::Gcm::App.new
-    app.name = "android-gcm-sample2"
+    app.name = "android_app"
     app.auth_key = "AIzaSyC8wQBvNUaVgGtF3sMlwf97fzPxuR1-x0s"
     app.connections = 1
     app.save!
 
     n = Rpush::Gcm::Notification.new
-    n.app = Rpush::Gcm::App.find_by_name("android-gcm-sample2")
+    n.app = Rpush::Gcm::App.find_by_name("android_app")
     n.registration_ids = Device.all.map{|device| device.registration_id}
     message = notification.message
     n.data = notification.as_json
